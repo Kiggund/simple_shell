@@ -9,7 +9,7 @@
 int execMd(char *argsC[])
 {
 	pid_t pid;
-	int exe;
+	int exe, status;
 
 	pid = fork();
 

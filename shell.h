@@ -1,5 +1,5 @@
-#ifndef Shell_h
-#define Shell_h
+#ifndef _SHELL_H_
+#define _SHELL_H_
 
 #include <sys/stat.h>
 #include <limits.h>
@@ -12,11 +12,12 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#define MAX_ARG 125
+#define MAX_ARG 20
 
-int printCommand(void);
-int tokenize(char *command, char *argsC[]);
 int execMd(char *argsC[]);
+int tokenize(char *command, char *argsC[]);
+int printCommand(void);
 char *removeNchar(char *str, int len);
 
 #endif
+
