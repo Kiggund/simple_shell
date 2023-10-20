@@ -1,5 +1,5 @@
 #include "shell.h"
-
+#define MAX_ARG 12
 /**
  * printCommand - Function to take users input
  *
