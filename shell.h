@@ -13,13 +13,18 @@
 #include <stdbool.h>
 
 #define MAX_ARG 15
+#define PROMPT "($) "
 
-int execMd(char *argsC[]);
-int printCommand(void);
+int execMd(char *argsC[], char **env);
+int printCommand(char **env);
 char *removeNchar(char *str, int len);
 int tokenize(char *command, char *argsC[]);
 bool space(char *sre);
 int _isspace(int cha);
+char *path(char *args);
+char *Scat(char *str1, char *str2);
+int _strlen(char *str);
+char *_strcat(char *str1, char *str2);
 
 #endif
 
