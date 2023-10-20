@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * printCommand - Function to take users input
  *
