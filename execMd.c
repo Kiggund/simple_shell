@@ -28,5 +28,5 @@ int execMd(char *argsC[])
 	else
 		wait(&status);
 
-	return(0);
+	return (0);
 }

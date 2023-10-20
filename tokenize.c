@@ -11,6 +11,7 @@ int tokenize(char *command, char *argsC[])
 {
 	char *delim = " ", *token;
 	int count = 0;
+
 	token = strtok(command, delim);
 
 	while (token)

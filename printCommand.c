@@ -15,7 +15,7 @@ int printCommand(void)
 	size = getline(&buff, &n, stdin);
 	if (size == -1)
 	{
-		if(feof(stdin))
+		if (feof(stdin))
 		{
 			free(buff);
 			exit(0);
@@ -29,7 +29,6 @@ int printCommand(void)
 
 	command = removeNchar(buff, size);
 	tokenize(command, argsC);
-	
 	execMd(argsC);
 
 	free(buff);
