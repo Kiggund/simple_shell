@@ -38,12 +38,15 @@ char *_getenv(info_t *info, const char *name)
  */
 int _mysetenv(info_t *info)
 {
+	char c = 'a';
+	char str[2];
 	if (info->argc != 3)
 	{
 		_eputs("Incorrect number of arguements\n");
 		return (1);
 	}
-	return (!_setenv(info, info->arg[1], info->arg[2]));
+	sprintf(str, "%c", c);
+	return (!_setenv(str, info->arg[2], 1));
 }
 /**
  * _myunsetenv - Remove an environment variable
