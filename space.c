@@ -1,15 +1,28 @@
-#include <ctype.h>
-#include <stdio.h>
-int main()
+#include "shell.h"
+/**
+ * space - function to check for space
+ * @sre: the inout from the user
+ * Return: return true if all char is a space
+ */
+
+bool space(char *sre)
 {
-	char c = ' ';
-	if (isspace(c))
+	while (*sre)
 	{
-		printf("the char is space");
+		if (!_isspace(*sre))
+			return (false);
+		sre++;
 	}
-	else
-	{
-		printf("the char is not space");
-	}
-	return 0;
+	return (true);
+}
+
+/**
+ * _isspace - function to check if a char is a space
+ * @cha: character to be checked
+ * Return: return 0 if it is a space
+ */
+
+int _isspace(int cha)
+{
+	return (cha == ' ' || cha == '\n' || cha == '\t' || cha == '\v');
 }

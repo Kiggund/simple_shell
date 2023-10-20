@@ -16,13 +16,15 @@ int execMd(char *argsC[])
 	if (pid == -1)
 	{
 		perror("Failed to create a process");
+		exit(EXIT_FAILURE);
 	}
 	else if (pid == 0)
 	{
 		exe = execve(argsC[0], argsC, NULL);
 		if (exe == -1)
 		{
-			perror("Error executing command");
+			perror("Error");
+			exit(EXIT_FAILURE);
 		}
 	}
 	else

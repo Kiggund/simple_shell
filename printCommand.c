@@ -26,9 +26,14 @@ int printCommand(void)
 		}
 	}
 
-	command = removeNchar(buff, size);
-	tokenize(command, argsC);
-	execMd(argsC);
+	if (space(buff))
+		;
+	else
+	{
+		command = removeNchar(buff, size);
+		tokenize(command, argsC);
+		execMd(argsC);
+	}
 
 	free(buff);
 	return (size);
